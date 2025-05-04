@@ -8,6 +8,7 @@ const categoriaRoute = require('./routes/categoriaRoute');
 const usuarioRoute = require("./routes/usuarioRoute");
 const perfilRoute = require('./routes/perfilRoute');
 const loginRoute = require("./routes/loginRoute");
+const lojaRoute = require (".routes/lojaRoute")
 const cookieParser = require("cookie-parser");
 const AuthMiddleware = require('./middlewares/authMiddleware');
 const app = express();
@@ -38,6 +39,7 @@ app.use("/marcas", marcaRoute);
 app.use("/categorias", categoriaRoute);
 app.use("/usuarios", usuarioRoute);
 app.use("/perfis", perfilRoute);
+app.use("loja", lojaRoute)
 
 global.CAMINHO_IMG_BROWSER = "/img/produtos/";
 global.CAMINHO_DIRETORIO = __dirname + "/public/img/produtos/";
